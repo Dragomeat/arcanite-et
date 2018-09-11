@@ -17,7 +17,6 @@ use App\Http\Requests\ConfirmRequest;
 use App\Repositories\CodeRepository;
 use App\Repositories\UserRepository;
 use App\User;
-use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Contracts\Auth\StatefulGuard;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
