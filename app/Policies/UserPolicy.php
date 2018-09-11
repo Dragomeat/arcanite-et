@@ -27,7 +27,27 @@ class UserPolicy
      * @param User $profile
      * @return bool
      */
+    public function show(User $authenticated, User $profile): bool
+    {
+        return $this->isOwnerFor($authenticated, $profile);
+    }
+
+    /**
+     * @param User $authenticated
+     * @param User $profile
+     * @return bool
+     */
     public function update(User $authenticated, User $profile): bool
+    {
+        return $this->isOwnerFor($authenticated, $profile);
+    }
+
+    /**
+     * @param User $authenticated
+     * @param User $profile
+     * @return bool
+     */
+    protected function isOwnerFor(User $authenticated, User $profile): bool
     {
         return $authenticated->id === $profile->id;
     }

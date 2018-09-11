@@ -37,4 +37,5 @@ Route::group(['prefix' => 'auth'], function () {
 });
 
 Route::resource('users', 'UserController')
+    ->middleware('auth')
     ->only(['show', 'update']);

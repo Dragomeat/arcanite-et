@@ -40,9 +40,13 @@ class UserController extends Controller
     /**
      * @param User $user
      * @return View
+     *
+     * @throws \Illuminate\Auth\Access\AuthorizationException
      */
     public function show(User $user): View
     {
+        $this->authorize('show', $user);
+
         return view('users.show', compact('user'));
     }
 
