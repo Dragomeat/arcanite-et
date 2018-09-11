@@ -27,7 +27,7 @@ class UserPolicy
      * @param User $profile
      * @return bool
      */
-    public function edit(User $authenticated, User $profile): bool
+    public function update(User $authenticated, User $profile): bool
     {
         return $authenticated->id === $profile->id;
     }
