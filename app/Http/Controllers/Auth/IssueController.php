@@ -14,18 +14,18 @@ namespace App\Http\Controllers\Auth;
 
 use App\Code;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\IssueRequest;
 use App\Mail\AuthAttempted;
 use App\Repositories\CodeRepository;
-use App\Http\Requests\IssueRequest;
-use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Contracts\View\View;
+use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Validation\ValidationException;
 
 /**
- * Class IssueController
+ * Class IssueController.
  */
 class IssueController extends Controller
 {
@@ -38,6 +38,7 @@ class IssueController extends Controller
 
     /**
      * IssueController constructor.
+     *
      * @param CodeRepository $codes
      */
     public function __construct(CodeRepository $codes)
@@ -55,9 +56,10 @@ class IssueController extends Controller
 
     /**
      * @param IssueRequest $request
-     * @return RedirectResponse
      *
      * @throws \Illuminate\Validation\ValidationException
+     *
+     * @return RedirectResponse
      */
     public function issue(IssueRequest $request): RedirectResponse
     {
@@ -92,6 +94,7 @@ class IssueController extends Controller
 
     /**
      * @param string $issuer
+     *
      * @return bool
      */
     protected function isCodeNotIssuedFor(string $issuer): bool
@@ -101,6 +104,7 @@ class IssueController extends Controller
 
     /**
      * @param string $issuer
+     *
      * @return Code
      */
     protected function createNewCode(string $issuer): Code
@@ -112,6 +116,7 @@ class IssueController extends Controller
 
     /**
      * @param IssueRequest $request
+     *
      * @return void
      */
     protected function sendFailedLoginResponse(IssueRequest $request): void

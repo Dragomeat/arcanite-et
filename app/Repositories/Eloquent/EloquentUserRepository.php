@@ -12,16 +12,17 @@ declare(strict_types=1);
 
 namespace App\Repositories\Eloquent;
 
-use App\User;
 use App\Repositories\UserRepository;
+use App\User;
 
 /**
- * Class EloquentUserRepository
+ * Class EloquentUserRepository.
  */
 class EloquentUserRepository implements UserRepository
 {
     /**
      * @param string $id
+     *
      * @return User|null
      */
     public function find(string $id): ?User
@@ -31,6 +32,7 @@ class EloquentUserRepository implements UserRepository
 
     /**
      * @param string $email
+     *
      * @return User|null
      */
     public function byEmail(string $email): ?User
@@ -40,6 +42,7 @@ class EloquentUserRepository implements UserRepository
 
     /**
      * @param User $user
+     *
      * @return void
      */
     public function save(User $user): void

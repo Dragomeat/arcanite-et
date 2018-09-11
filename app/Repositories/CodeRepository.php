@@ -15,30 +15,34 @@ namespace App\Repositories;
 use App\Code;
 
 /**
- * Interface CodeRepository
+ * Interface CodeRepository.
  */
 interface CodeRepository
 {
     /**
      * @param string $issuer
+     *
      * @return Code
      */
     public function issue(string $issuer): Code;
 
     /**
      * @param string $issuer
+     *
      * @return Code|null
      */
     public function forIssuer(string $issuer): ?Code;
 
     /**
      * @param Code $code
+     *
      * @return void
      */
     public function remove(Code $code): void;
 
     /**
      * @param Code $code
+     *
      * @return void
      */
     public function save(Code $code): void;

@@ -13,7 +13,7 @@ declare(strict_types=1);
 namespace App;
 
 /**
- * Class Code
+ * Class Code.
  */
 class Code
 {
@@ -29,8 +29,9 @@ class Code
 
     /**
      * AuthCode constructor.
+     *
      * @param string $issuer
-     * @param int $value
+     * @param int    $value
      */
     public function __construct(string $issuer, int $value)
     {

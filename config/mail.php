@@ -57,7 +57,7 @@ return [
 
     'from' => [
         'address' => env('MAIL_FROM_ADDRESS', 'no-reply@mg.dragomeat.com'),
-        'name' => env('MAIL_FROM_NAME', 'No-Reply'),
+        'name'    => env('MAIL_FROM_NAME', 'No-Reply'),
     ],
 
     /*

@@ -25,7 +25,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\ValidationException;
 
 /**
- * Class ConfirmController
+ * Class ConfirmController.
  */
 class ConfirmController extends Controller
 {
@@ -41,6 +41,7 @@ class ConfirmController extends Controller
 
     /**
      * ConfirmController constructor.
+     *
      * @param UserRepository $users
      * @param CodeRepository $codes
      */
@@ -60,11 +61,12 @@ class ConfirmController extends Controller
 
     /**
      * @param ConfirmRequest $request
+     *
      * @return RedirectResponse
      */
     public function confirm(ConfirmRequest $request): RedirectResponse
     {
-        $code = (int)$request->get('code');
+        $code = (int) $request->get('code');
         $issuer = $request->get('issuer');
 
         $issuedCode = $this->codes->forIssuer($issuer);
@@ -88,6 +90,7 @@ class ConfirmController extends Controller
 
     /**
      * @param array $attributes
+     *
      * @return User
      */
     protected function findOrCreate(array $attributes): User
@@ -99,7 +102,6 @@ class ConfirmController extends Controller
                 }
             );
     }
-
 
     /**
      * @return StatefulGuard

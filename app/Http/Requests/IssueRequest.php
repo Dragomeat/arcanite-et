@@ -15,7 +15,7 @@ namespace App\Http\Requests;
 use Illuminate\Foundation\Http\FormRequest;
 
 /**
- * Class AuthRequest
+ * Class AuthRequest.
  */
 class IssueRequest extends FormRequest
 {

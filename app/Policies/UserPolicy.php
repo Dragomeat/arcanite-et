@@ -16,7 +16,7 @@ use App\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
 /**
- * Class UserPolicy
+ * Class UserPolicy.
  */
 class UserPolicy
 {
@@ -25,6 +25,7 @@ class UserPolicy
     /**
      * @param User $authenticated
      * @param User $profile
+     *
      * @return bool
      */
     public function show(User $authenticated, User $profile): bool
@@ -35,6 +36,7 @@ class UserPolicy
     /**
      * @param User $authenticated
      * @param User $profile
+     *
      * @return bool
      */
     public function update(User $authenticated, User $profile): bool
@@ -45,6 +47,7 @@ class UserPolicy
     /**
      * @param User $authenticated
      * @param User $profile
+     *
      * @return bool
      */
     protected function isOwnerFor(User $authenticated, User $profile): bool

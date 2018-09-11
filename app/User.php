@@ -12,17 +12,16 @@ declare(strict_types=1);
 
 namespace App;
 
-use App\Notifications\VerifyIssuer;
-use Illuminate\Support\Carbon;
 use Illuminate\Auth\Authenticatable;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Notifications\Notifiable;
-use Illuminate\Foundation\Auth\Access\Authorizable;
-use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
+use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\Access\Authorizable;
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Carbon;
 
 /**
- * Class User
+ * Class User.
  *
  * @property int $id
  * @property string $name

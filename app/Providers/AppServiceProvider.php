@@ -12,14 +12,14 @@ declare(strict_types=1);
 
 namespace App\Providers;
 
-use App\Repositories\UserRepository;
-use App\Repositories\CodeRepository;
-use Illuminate\Support\ServiceProvider;
 use App\Repositories\Cache\CacheCodeRepository;
+use App\Repositories\CodeRepository;
 use App\Repositories\Eloquent\EloquentUserRepository;
+use App\Repositories\UserRepository;
+use Illuminate\Support\ServiceProvider;
 
 /**
- * Class AppServiceProvider
+ * Class AppServiceProvider.
  */
 class AppServiceProvider extends ServiceProvider
 {

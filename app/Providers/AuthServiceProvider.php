@@ -12,12 +12,12 @@ declare(strict_types=1);
 
 namespace App\Providers;
 
-use App\User;
 use App\Policies\UserPolicy;
+use App\User;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 
 /**
- * Class AuthServiceProvider
+ * Class AuthServiceProvider.
  */
 class AuthServiceProvider extends ServiceProvider
 {

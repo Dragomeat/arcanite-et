@@ -18,7 +18,7 @@ use App\Repositories\CodeRepository;
 use Illuminate\Contracts\Cache\Repository as CacheRepository;
 
 /**
- * Class CacheCodeRepository
+ * Class CacheCodeRepository.
  */
 class CacheCodeRepository implements CodeRepository
 {
@@ -34,8 +34,9 @@ class CacheCodeRepository implements CodeRepository
 
     /**
      * CacheCodeRepository constructor.
+     *
      * @param CacheRepository $cache
-     * @param CodeIssuer $issuer
+     * @param CodeIssuer      $issuer
      */
     public function __construct(CacheRepository $cache, CodeIssuer $issuer)
     {
@@ -45,6 +46,7 @@ class CacheCodeRepository implements CodeRepository
 
     /**
      * @param string $issuer
+     *
      * @return Code
      */
     public function issue(string $issuer): Code
@@ -54,6 +56,7 @@ class CacheCodeRepository implements CodeRepository
 
     /**
      * @param string $issuer
+     *
      * @return Code|null
      */
     public function forIssuer(string $issuer): ?Code
@@ -63,6 +66,7 @@ class CacheCodeRepository implements CodeRepository
 
     /**
      * @param Code $code
+     *
      * @return void
      */
     public function remove(Code $code): void
@@ -74,9 +78,10 @@ class CacheCodeRepository implements CodeRepository
 
     /**
      * @param Code $code
-     * @return void
      *
      * @throws \Psr\SimpleCache\InvalidArgumentException
+     *
+     * @return void
      */
     public function save(Code $code): void
     {
@@ -89,6 +94,7 @@ class CacheCodeRepository implements CodeRepository
 
     /**
      * @param string $issuer
+     *
      * @return string
      */
     protected function getStoreKey(string $issuer): string

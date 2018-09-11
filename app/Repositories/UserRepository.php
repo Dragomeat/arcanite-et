@@ -15,24 +15,27 @@ namespace App\Repositories;
 use App\User;
 
 /**
- * Interface UserRepository
+ * Interface UserRepository.
  */
 interface UserRepository
 {
     /**
      * @param string $id
+     *
      * @return User|null
      */
     public function find(string $id): ?User;
 
     /**
      * @param string $email
+     *
      * @return User|null
      */
     public function byEmail(string $email): ?User;
 
     /**
      * @param User $user
+     *
      * @return void
      */
     public function save(User $user): void;
