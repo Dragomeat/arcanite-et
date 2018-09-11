@@ -15,12 +15,13 @@ namespace App;
 use Exception;
 
 /**
- * Class CodeIssuer
+ * Class CodeIssuer.
  */
 class CodeIssuer
 {
     /**
      * @param string $issuer
+     *
      * @return Code
      */
     public function issue(string $issuer): Code
@@ -31,7 +32,6 @@ class CodeIssuer
                 random_int(1000, 9999)
             );
         } catch (Exception $e) {
-
         }
     }
 }

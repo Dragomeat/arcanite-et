@@ -17,7 +17,7 @@ use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\Gate;
 
 /**
- * Class UpdateProfileRequest
+ * Class UpdateProfileRequest.
  */
 class UpdateProfileRequest extends FormRequest
 {

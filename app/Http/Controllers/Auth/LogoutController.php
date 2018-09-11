@@ -12,19 +12,20 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers\Auth;
 
-use Illuminate\Http\Request;
-use Illuminate\Http\RedirectResponse;
-use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Contracts\Auth\StatefulGuard;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 /**
- * Class LogoutController
+ * Class LogoutController.
  */
 class LogoutController extends Controller
 {
     /**
      * @param Request $request
+     *
      * @return \Illuminate\Http\RedirectResponse
      */
     public function __invoke(Request $request): RedirectResponse
@@ -35,6 +36,7 @@ class LogoutController extends Controller
 
         return redirect()->route('start-page');
     }
+
     /**
      * @return StatefulGuard
      */

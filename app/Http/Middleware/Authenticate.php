@@ -15,12 +15,13 @@ namespace App\Http\Middleware;
 use Illuminate\Auth\Middleware\Authenticate as Middleware;
 
 /**
- * Class Authenticate
+ * Class Authenticate.
  */
 class Authenticate extends Middleware
 {
     /**
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
+     *
      * @return string
      */
     protected function redirectTo($request): string

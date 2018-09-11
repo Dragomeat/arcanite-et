@@ -17,7 +17,7 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
 /**
- * Class AuthAttempted
+ * Class AuthAttempted.
  */
 class AuthAttempted extends Mailable
 {
@@ -29,6 +29,7 @@ class AuthAttempted extends Mailable
 
     /**
      * AuthAttempted constructor.
+     *
      * @param Code $code
      */
     public function __construct(Code $code)
@@ -39,11 +40,11 @@ class AuthAttempted extends Mailable
     /**
      * @return AuthAttempted
      */
-    public function build(): AuthAttempted
+    public function build(): self
     {
         return $this->subject('Auth attempted')
             ->markdown('emails.auth.attempted', [
-                'code' => $this->code
+                'code' => $this->code,
             ]);
     }
 }

@@ -19,7 +19,7 @@ use Illuminate\Contracts\View\View;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 
 /**
- * Class UserController
+ * Class UserController.
  */
 class UserController extends Controller
 {
@@ -30,6 +30,7 @@ class UserController extends Controller
 
     /**
      * UserController constructor.
+     *
      * @param UserRepository $users
      */
     public function __construct(UserRepository $users)
@@ -39,9 +40,10 @@ class UserController extends Controller
 
     /**
      * @param User $user
-     * @return View
      *
      * @throws \Illuminate\Auth\Access\AuthorizationException
+     *
+     * @return View
      */
     public function show(User $user): View
     {
@@ -51,8 +53,9 @@ class UserController extends Controller
     }
 
     /**
-     * @param User $user
+     * @param User                 $user
      * @param UpdateProfileRequest $request
+     *
      * @return RedirectResponse
      */
     public function update(User $user, UpdateProfileRequest $request): RedirectResponse
