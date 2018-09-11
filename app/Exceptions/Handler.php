@@ -16,7 +16,7 @@ use Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 
 /**
- * Class Handler
+ * Class Handler.
  */
 class Handler extends ExceptionHandler
 {
